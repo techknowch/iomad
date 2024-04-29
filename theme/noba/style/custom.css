@@ -1,0 +1,79 @@
+.login-container{
+    background-color: #FAFFEC;
+    border-radius: 0%;
+    # margin-left: 20%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-100%, -100%);
+    z-index:2;
+    #filter: none;
+}
+.img-bg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url([[pix:theme|bg_student]]);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(4px) brightness(50%);
+}
+
+#region-main-box{
+    margin: 0px;
+}
+
+#login-topbar{
+     width: 100%;
+     height: 125px; 
+#     background-color: #2F8D74;
+     background-color: #096060;
+}
+
+.form-control-lg{
+	border-radius: 0px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 2px;
+	background-color: #faffec;
+}
+
+.login-form-submit{
+	text-align: center;
+}
+
+#loginbtn{
+	border-radius: 0px;
+	border-top-width: 0px;
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 2px;
+	background-color: #faffec;
+	color: black;
+}
+
+#topbar-logo{
+	position: absolute;
+	background-image: url([[pix:theme|topbar_logo]]);
+	background-repeat: no-repeat;
+	height: 40px;
+	width: 500px;
+	border-width: 0px;
+	margin-top: 0px;
+	top: 40px;
+	margin-left: 0px;
+	left: 50px;
+}
+
+.navbar-noba{
+#	background-color: #faffec;
+     background-color: #096060;
+     height: 125px !important;
+}
+.navbar.fixed-top{
+	height: 125px;
+}
+#page{
+	margin-top: 125px !important;
+}
