@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-echo $OUTPUT->main_content_placeholder();
+echo $OUTPUT->main_content();
 
 // require_once($CFG->libdir . '/behat/lib.php');
 // require_once($CFG->dirroot . '/course/lib.php');
