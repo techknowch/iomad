@@ -82,26 +82,30 @@ $regionmainsettingsmenu = $buildregionmainsettings ? $OUTPUT->region_main_settin
 $header = $PAGE->activityheader;
 $headercontent = $header->export_for_template($renderer);
 
-$templatecontext = [
-    'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
-    'output' => $OUTPUT,
-    'sidepreblocks' => $blockshtml,
-    'hasblocks' => $hasblocks,
-    'bodyattributes' => $bodyattributes,
-    'courseindexopen' => $courseindexopen,
-    'blockdraweropen' => $blockdraweropen,
-    'courseindex' => $courseindex,
-    'primarymoremenu' => $primarymenu['moremenu'],
-    'secondarymoremenu' => $secondarynavigation ?: false,
-    'mobileprimarynav' => $primarymenu['mobileprimarynav'],
-    'usermenu' => $primarymenu['user'],
-    'langmenu' => $primarymenu['lang'],
-    'forceblockdraweropen' => $forceblockdraweropen,
-    'regionmainsettingsmenu' => $regionmainsettingsmenu,
-    'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
-    'overflow' => $overflow,
-    'headercontent' => $headercontent,
-    'addblockbutton' => $addblockbutton
+// $templatecontext = [
+//     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
+//     'output' => $OUTPUT,
+//     'sidepreblocks' => $blockshtml,
+//     'hasblocks' => $hasblocks,
+//     'bodyattributes' => $bodyattributes,
+//     'courseindexopen' => $courseindexopen,
+//     'blockdraweropen' => $blockdraweropen,
+//     'courseindex' => $courseindex,
+//     'primarymoremenu' => $primarymenu['moremenu'],
+//     'secondarymoremenu' => $secondarynavigation ?: false,
+//     'mobileprimarynav' => $primarymenu['mobileprimarynav'],
+//     'usermenu' => $primarymenu['user'],
+//     'langmenu' => $primarymenu['lang'],
+//     'forceblockdraweropen' => $forceblockdraweropen,
+//     'regionmainsettingsmenu' => $regionmainsettingsmenu,
+//     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
+//     'overflow' => $overflow,
+//     'headercontent' => $headercontent,
+//     'addblockbutton' => $addblockbutton
+// ];
+
+$templatecontext = (object)[
+    'texttodisplay' => 'new dashboard',
 ];
 
 echo $OUTPUT->render_from_template('theme_noba/drawers', $templatecontext);
