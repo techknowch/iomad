@@ -1,33 +1,41 @@
-:root {
+$color_1: #f4f4f5;
+$color_2: #232d34;
+$color_3: #096060;
+$color_4: #2e8d73;
+$color_5: #ffff96;
+$color_6: #ffffff;
+$font-family_1: GT Walsheim, var(--default-font-family);
+
+&:root {
   --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
     "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
     "Source Han Sans CN", sans-serif;
 }
-
 .main-container {
   overflow: hidden;
-}
-
-.main-container,
-.main-container * {
   box-sizing: border-box;
-}
-
-input,
-select,
-textarea,
-button {
-  outline: 0;
-}
-
-.main-container {
   position: relative;
   width: 1440px;
   height: 967px;
   margin: 0 auto;
   background: #096060;
   overflow: hidden;
+  * {
+    box-sizing: border-box;
+  }
+}
+input {
+  outline: 0;
+}
+select {
+  outline: 0;
+}
+textarea {
+  outline: 0;
+}
+button {
+  outline: 0;
 }
 .rectangle {
   position: relative;
@@ -110,8 +118,8 @@ button {
   height: 23px;
   top: 53px;
   right: 102px;
-  color: #f4f4f5;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_1;
+  font-family: $font-family_1;
   font-size: 15px;
   font-weight: 400;
   line-height: 17.25px;
@@ -224,8 +232,8 @@ button {
   width: 85px;
   height: 15px;
   margin: 10px 0 0 53px;
-  color: #232d34;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_2;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 500;
   line-height: 15px;
@@ -291,8 +299,8 @@ button {
   height: 15px;
   top: 91px;
   left: calc(50% - -331.36px);
-  color: #232d34;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_2;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 500;
   line-height: 15px;
@@ -310,8 +318,8 @@ button {
   height: 15px;
   top: 91px;
   left: calc(50% - -532.93px);
-  color: #232d34;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_2;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 500;
   line-height: 15px;
@@ -329,8 +337,8 @@ button {
   height: 15px;
   top: 91px;
   left: calc(50% - 208.5px);
-  color: #232d34;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_2;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 500;
   line-height: 15px;
@@ -348,8 +356,8 @@ button {
   height: 15px;
   top: 91px;
   left: calc(50% - 395.5px);
-  color: #232d34;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_2;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 500;
   line-height: 15px;
@@ -379,7 +387,7 @@ button {
   width: 1241px;
   height: 86px;
   margin: 41px 0 0 39px;
-  font-family: GT Walsheim, var(--default-font-family);
+  font-family: $font-family_1;
   font-size: 52px;
   font-weight: 500;
   line-height: 53px;
@@ -389,8 +397,8 @@ button {
 }
 .great-work-this-week {
   position: relative;
-  color: #096060;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_3;
+  font-family: $font-family_1;
   font-size: 52px;
   font-weight: 500;
   line-height: 53px;
@@ -399,8 +407,8 @@ button {
 }
 .sarina {
   position: relative;
-  color: #2e8d73;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_4;
+  font-family: $font-family_1;
   font-size: 52px;
   font-weight: 500;
   line-height: 53px;
@@ -409,8 +417,8 @@ button {
 }
 .keep-it-up {
   position: relative;
-  color: #096060;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_3;
+  font-family: $font-family_1;
   font-size: 52px;
   font-weight: 500;
   line-height: 53px;
@@ -426,8 +434,8 @@ button {
   height: 38px;
   bottom: 5px;
   left: 44px;
-  color: #096060;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_3;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 400;
   line-height: 18.7px;
@@ -442,8 +450,8 @@ button {
   height: 19px;
   bottom: 5px;
   left: 158px;
-  color: #096060;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_3;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 400;
   line-height: 18.7px;
@@ -485,8 +493,8 @@ button {
   height: 15px;
   top: 247px;
   left: calc(50% - 55.5px);
-  color: #096060;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_3;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 500;
   line-height: 15px;
@@ -503,8 +511,8 @@ button {
   height: 15px;
   top: 247px;
   left: calc(50% - -422.5px);
-  color: #096060;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_3;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 500;
   line-height: 15px;
@@ -521,8 +529,8 @@ button {
   height: 106px;
   top: calc(50% - 17.5px);
   left: calc(50% - 90.5px);
-  color: #096060;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_3;
+  font-family: $font-family_1;
   font-size: 82px;
   font-weight: 500;
   line-height: 83.64px;
@@ -540,8 +548,8 @@ button {
   height: 106px;
   top: calc(50% - 17.5px);
   left: calc(50% - -365.5px);
-  color: #096060;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_3;
+  font-family: $font-family_1;
   font-size: 82px;
   font-weight: 500;
   line-height: 83.64px;
@@ -581,8 +589,8 @@ button {
   height: 19px;
   bottom: 232px;
   left: 44px;
-  color: #096060;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_3;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 400;
   line-height: 18.7px;
@@ -600,8 +608,8 @@ button {
   height: 16px;
   top: 368px;
   left: calc(50% - 10.5px);
-  color: #096060;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_3;
+  font-family: $font-family_1;
   font-size: 15px;
   font-weight: 400;
   line-height: 15.938px;
@@ -618,8 +626,8 @@ button {
   height: 16px;
   top: 368px;
   left: calc(50% - -428.5px);
-  color: #096060;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_3;
+  font-family: $font-family_1;
   font-size: 15px;
   font-weight: 400;
   line-height: 15.938px;
@@ -636,8 +644,8 @@ button {
   height: 15px;
   top: 372px;
   left: calc(50% - 281.5px);
-  color: #ffff96;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 500;
   line-height: 15px;
@@ -654,8 +662,8 @@ button {
   height: 15px;
   top: 372px;
   left: calc(50% - -157.5px);
-  color: #ffffff;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_6;
+  font-family: $font-family_1;
   font-size: 17px;
   font-weight: 500;
   line-height: 15px;
@@ -672,8 +680,8 @@ button {
   height: 106px;
   top: calc(50% - -107.5px);
   left: calc(50% - 318.5px);
-  color: #ffff96;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 82px;
   font-weight: 500;
   line-height: 83.64px;
@@ -691,8 +699,8 @@ button {
   height: 106px;
   top: calc(50% - -107.5px);
   left: calc(50% - -137.5px);
-  color: #ffffff;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_6;
+  font-family: $font-family_1;
   font-size: 82px;
   font-weight: 500;
   line-height: 83.64px;
@@ -710,8 +718,8 @@ button {
   height: 16px;
   top: 493px;
   left: calc(50% - 253.5px);
-  color: #ffff96;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_5;
+  font-family: $font-family_1;
   font-size: 15px;
   font-weight: 400;
   line-height: 15.938px;
@@ -728,8 +736,8 @@ button {
   height: 16px;
   top: 493px;
   left: calc(50% - -199.5px);
-  color: #ffffff;
-  font-family: GT Walsheim, var(--default-font-family);
+  color: $color_6;
+  font-family: $font-family_1;
   font-size: 15px;
   font-weight: 400;
   line-height: 15.938px;
