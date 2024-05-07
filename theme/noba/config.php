@@ -75,12 +75,13 @@ $THEME->layouts = [
         'defaultregion' => 'side-pre',
         'options' => array('nonavbar' => true, 'langmenu' => true),
     ),
-    'myprofile' => array(
-        'file' =>'mydrawers.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
-        'options' => array('nonavbar' => true, 'langmenu' => true),
-    ),
+        // Define the new layout for your custom page.
+        'mycustompage' => array(
+            'file' => 'mycustompage.php', // Specify the PHP file that will render the page.
+            'regions' => array('side-pre'), // Define the regions for your layout.
+            'defaultregion' => 'side-pre', // Specify the default region.
+            // You can include additional options here if needed.
+        ),
     'login' => array(
 	    'file' => 'login.php',
 	    'regions' => array(),
