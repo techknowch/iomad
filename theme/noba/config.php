@@ -69,7 +69,7 @@ $THEME->layouts = [
  //       'defaultregion' => 'side-pre',
  //   ),
     // My dashboard page.
-    'mydashboard' => array(
+    'dashboard' => array(
         'file' => 'mycustompage.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
