@@ -1063,8 +1063,8 @@ return $output;
 
       if($PAGE->pagelayout && ($PAGE->pagelayout == 'course' || $PAGE->pagelayout == 'incourse' || $PAGE->pagelayout == 'coursecategory')) {
         $context->ccn_context_course = true;
-    //   } elseif($PAGE->pagelayout && $PAGE->pagelayout == 'mydashboard' && $this->page->theme->settings->dashboard_layout == '1') {
-    //     return $this->render_from_template('theme_edumy/ccn_block_dashboard_front', $context);
+      } elseif($PAGE->pagelayout && $PAGE->pagelayout == 'mydashboard' && $this->page->theme->settings->dashboard_layout == '1') {
+        return $this->render_from_template('theme_edumy/ccn_block_dashboard_front', $context);
       } elseif($PAGE->pagelayout && ($PAGE->pagelayout == 'mydashboard' || $PAGE->pagelayout == 'admin')) {
         return $this->render_from_template('theme_edumy/ccn_block_dashboard_dash', $context);
       }
