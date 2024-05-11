@@ -70,7 +70,7 @@ $THEME->layouts = [
  //   ),
     // My dashboard page.
     'mydashboard' => array(
-        'file' => 'mycustompage.php',
+        'file' => 'mydrawers.php',
         'regions' => array('side-pre'),
         'defaultregion' => 'side-pre',
         'options' => array('nonavbar' => true, 'langmenu' => true),
