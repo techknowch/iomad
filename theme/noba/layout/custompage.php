@@ -868,4 +868,4 @@ HTML;
 $templatecontext['html_content'] = $html_content;
 
 // Render the template with the custom context
-echo $OUTPUT->render_from_template('theme_noba/mydrawers', $templatecontext);
+echo $OUTPUT->render_from_template('theme_noba/custompage', $templatecontext);
