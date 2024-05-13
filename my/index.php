@@ -161,7 +161,7 @@ if (empty($CFG->forcedefaultmymoodle) && $PAGE->user_allowed_editing()) {
 
     $resetbutton = '';
     $resetstring = get_string('resetpage', 'my');
-    $reseturl = new moodle_url("$CFG->wwwroot/my/index.php", array('edit' => 1, 'reset' => 1));
+    $reseturl = new moodle_url("$CFG->wwwroot/my_custom_dashboard/student_dashboard.php", array('edit' => 1, 'reset' => 1));
 
     if (!$currentpage->userid) {
         // viewing a system page -- let the user customise it
