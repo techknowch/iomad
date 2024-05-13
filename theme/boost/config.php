@@ -86,12 +86,12 @@ $THEME->layouts = [
         'options' => array('nonavbar' => true),
     ),
     // My dashboard page.
-    'mydashboard' => array(
-        'file' => 'drawers.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
-        'options' => array('nonavbar' => true, 'langmenu' => true),
-    ),
+    // 'mydashboard' => array(
+    //     'file' => 'drawers.php',
+    //     'regions' => array('side-pre'),
+    //     'defaultregion' => 'side-pre',
+    //     'options' => array('nonavbar' => true, 'langmenu' => true),
+    // ),
     // My public page.
     'mypublic' => array(
         'file' => 'drawers.php',
