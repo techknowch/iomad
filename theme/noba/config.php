@@ -69,21 +69,28 @@ $THEME->layouts = [
  //       'defaultregion' => 'side-pre',
  //   ),
     // My dashboard page.
-    'mydashboard' => array(
-        'file' => 'custompage.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
-        'options' => array('nonavbar' => true, 'langmenu' => true),
-    ),
-        // Define the new layout for your custom page.
-        'mycustompage' => array(
-            'file' => 'mycustompage.php', // Specify the PHP file that will render the page.
-            'regions' => array('side-pre'), // Define the regions for your layout.
-            'defaultregion' => 'side-pre', // Specify the default region.
-            // You can include additional options here if needed.
+    // 'mydashboard' => array(
+    //     'file' => 'custompage.php',
+    //     'regions' => array('side-pre'),
+    //     'defaultregion' => 'side-pre',
+    //     'options' => array('nonavbar' => true, 'langmenu' => true),
+    // ),
+    // 'login' => array(
+	//     'file' => 'login.php',
+	//     'regions' => array(),
+    // ),
+        // Other layouts...
+        'studentdashboard' => array(
+            'file' => 'student_dashboard.php',
+            'regions' => array(),
+            'options' => array(),
+            'defaultregion' => '',
         ),
-    'login' => array(
-	    'file' => 'login.php',
-	    'regions' => array(),
-    ),
+        'admindashboard' => array(
+            'file' => 'admin_dashboard.php',
+            'regions' => array(),
+            'options' => array(),
+            'defaultregion' => '',
+        ),    
 ];
+
