@@ -45,6 +45,15 @@ $reset  = optional_param('reset', null, PARAM_BOOL);
 
 require_login();
 
+
+
+// Check if the user is a student
+$studentRoleId = 5; // Assuming the role ID for student is 5
+if (isloggedin() && !isguestuser() && user_has_role_assignment($USER->id, $studentRoleId)) {
+    // Redirect the student to the dashboard
+    redirect(new moodle_url('/my_custom_dashboard/student_dashboard.php'));
+}
+
 $hassiteconfig = has_capability('moodle/site:config', context_system::instance());
 if ($hassiteconfig && moodle_needs_upgrading()) {
     redirect(new moodle_url('/admin/index.php'));
