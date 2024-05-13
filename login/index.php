@@ -87,6 +87,32 @@ $errormsg = '';
 $infomsg = '';
 $errorcode = 0;
 
+
+// Check if the user has actually submitted login data to us
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username']) && isset($_POST['password'])) {
+    $username = trim(core_text::strtolower($_POST['username']));
+    $password = $_POST['password'];
+
+    // Authenticate user login
+    $user = authenticate_user_login($username, $password);
+
+    if ($user) {
+        // Determine if the logged-in user is a student (customize this condition as needed)
+        if (is_student($user)) {
+            // Redirect students to your new student template
+            redirect('path/to/your/student_dashboard.php');
+        } else {
+            // Redirect other users to their respective pages
+            // You can customize this based on roles or other criteria
+            // Example: redirect('path/to/another/page.php');
+        }
+    } else {
+        // Handle authentication failure
+        $errormsg = get_string("invalidlogin");
+        $errorcode = 3;
+    }
+}
+
 // IOMAD - Set the theme if the server hostname matches one of ours.
 if ($DB->get_manager()->table_exists('company') &&
     $company = $DB->get_record('company', array('hostname' => $_SERVER["SERVER_NAME"]))) {
