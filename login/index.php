@@ -87,17 +87,6 @@ $errormsg = '';
 $infomsg = '';
 $errorcode = 0;
 
-
-
-
-// Continue with the existing code...
-
-// test the session actually works by redirecting to self
-$SESSION->wantsurl = $urltogo;
-redirect(new moodle_url(get_login_url(), array('testsession'=>$user->id)));
-
-
-
 // IOMAD - Set the theme if the server hostname matches one of ours.
 if ($DB->get_manager()->table_exists('company') &&
     $company = $DB->get_record('company', array('hostname' => $_SERVER["SERVER_NAME"]))) {
