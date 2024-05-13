@@ -35,7 +35,7 @@
  */
 
 
- var_dump('../config.php');
+ require_once('../config.php');
  die();
  require_once($CFG->dirroot . '/my/lib.php');
  
