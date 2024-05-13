@@ -108,7 +108,7 @@ if (!isguestuser()) {   // Skip default home page for guests
         } else if (!empty($CFG->defaulthomepage) && $CFG->defaulthomepage == HOMEPAGE_USER) {
             $frontpagenode = $PAGE->settingsnav->add(get_string('frontpagesettings'), null, navigation_node::TYPE_SETTING, null);
             $frontpagenode->force_open();
-            $frontpagenode->add(get_string('makethismyhome'), new moodle_url('/my/', array('setdefaulthome' => true)),
+            $frontpagenode->add(get_string('makethismyhome'), new moodle_url('/my_custom_dashboard/student_dashboard.php', array('setdefaulthome' => true)),
                     navigation_node::TYPE_SETTING);
         }
     }
