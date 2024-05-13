@@ -45,15 +45,6 @@ $reset  = optional_param('reset', null, PARAM_BOOL);
 
 require_login();
 
-
-
-// Check if the user is a student
-$studentRoleId = 5; // Assuming the role ID for student is 5
-if (isloggedin() && !isguestuser() && user_has_role_assignment($USER->id, $studentRoleId)) {
-    // Redirect the student to the dashboard
-    redirect(new moodle_url('/my_custom_dashboard/student_dashboard.php'));
-}
-
 $hassiteconfig = has_capability('moodle/site:config', context_system::instance());
 if ($hassiteconfig && moodle_needs_upgrading()) {
     redirect(new moodle_url('/admin/index.php'));
@@ -101,8 +92,8 @@ if (!$currentpage = my_get_page($userid, MY_PAGE_PRIVATE)) {
 // Start setting up the page
 $params = array();
 $PAGE->set_context($context);
-$PAGE->set_url('/my_custom_dashboard/student_dashboard.php', $params);
-$PAGE->set_pagelayout('studentdashboard');
+$PAGE->set_url('/my/index.php', $params);
+$PAGE->set_pagelayout('mydashboard');
 $PAGE->add_body_class('limitedwidth');
 $PAGE->set_pagetype('my-index');
 $PAGE->blocks->add_region('content');
@@ -117,7 +108,7 @@ if (!isguestuser()) {   // Skip default home page for guests
         } else if (!empty($CFG->defaulthomepage) && $CFG->defaulthomepage == HOMEPAGE_USER) {
             $frontpagenode = $PAGE->settingsnav->add(get_string('frontpagesettings'), null, navigation_node::TYPE_SETTING, null);
             $frontpagenode->force_open();
-            $frontpagenode->add(get_string('makethismyhome'), new moodle_url('/my_custom_dashboard/student_dashboard.php', array('setdefaulthome' => true)),
+            $frontpagenode->add(get_string('makethismyhome'), new moodle_url('/my/', array('setdefaulthome' => true)),
                     navigation_node::TYPE_SETTING);
         }
     }
@@ -161,7 +152,7 @@ if (empty($CFG->forcedefaultmymoodle) && $PAGE->user_allowed_editing()) {
 
     $resetbutton = '';
     $resetstring = get_string('resetpage', 'my');
-    $reseturl = new moodle_url("$CFG->wwwroot/my_custom_dashboard/student_dashboard.php", array('edit' => 1, 'reset' => 1));
+    $reseturl = new moodle_url("$CFG->wwwroot/my/index.php", array('edit' => 1, 'reset' => 1));
 
     if (!$currentpage->userid) {
         // viewing a system page -- let the user customise it
