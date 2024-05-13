@@ -92,7 +92,7 @@ if (!$currentpage = my_get_page($userid, MY_PAGE_PRIVATE)) {
 // Start setting up the page
 $params = array();
 $PAGE->set_context($context);
-$PAGE->set_url('/my/index.php', $params);
+$PAGE->set_url('/my_custom_dashboard/student_dashboard.php', $params);
 $PAGE->set_pagelayout('studentdashboard');
 $PAGE->add_body_class('limitedwidth');
 $PAGE->set_pagetype('my-index');
