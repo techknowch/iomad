@@ -34,7 +34,9 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-//  require_once(__DIR__ . '/../config.php');
+
+ var_dump(__DIR__ . '/../config.php');
+ die();
  require_once($CFG->dirroot . '/my/lib.php');
  
  redirect_if_major_upgrade_required();
