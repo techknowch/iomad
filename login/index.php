@@ -88,33 +88,23 @@ $infomsg = '';
 $errorcode = 0;
 
 
+if ($user) {
+    // Check if the logged-in user has the student role
+    $studentRoleId = 5; // Assuming the role ID for student is 5
+    if (user_has_role_assignment($user->id, $studentRoleId)) {
+        // Redirect the student to the dashboard
+        $urltogo = new moodle_url('/my_custom_dashboard/student_dashboard/student');
+    } else {
+        // Redirect other users to the default return URL
+        $urltogo = core_login_get_return_url();
+    }
 
-// Initialize $user variable
-$user = $USER;
+    // Continue with the existing code...
 
-// Check if the logged-in user has the student role
-$studentRoleId = 5; // Assuming the role ID for student is 5
-if (isloggedin() && !isguestuser() && user_has_role_assignment($user->id, $studentRoleId)) {
-    // Redirect the student to the dashboard
-    $urltogo = new moodle_url('/my_custom_dashboard/student_dashboard.php');
-} else {
-    // Redirect other users to the default return URL
-    $urltogo = core_login_get_return_url();
+    // test the session actually works by redirecting to self
+    $SESSION->wantsurl = $urltogo;
+    redirect(new moodle_url(get_login_url(), array('testsession'=>$USER->id)));
 }
-
-// Redirect if there is a wantsurl
-if (!empty($SESSION->wantsurl)) {
-    redirect($SESSION->wantsurl);
-}
-
-// Continue with the existing code...
-
-// test the session actually works by redirecting to self
-$SESSION->wantsurl = $urltogo;
-redirect(new moodle_url(get_login_url(), array('testsession'=>$user->id)));
-
-
-
 
 
 // IOMAD - Set the theme if the server hostname matches one of ours.
