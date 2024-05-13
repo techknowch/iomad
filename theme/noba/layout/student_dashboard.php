@@ -14,7 +14,7 @@ $PAGE->set_pagelayout('studentdashboard'); // Use the studentdashboard layout
 echo $OUTPUT->header();
 
 // Include the student dashboard file
-include('path/to/student_dashboard.php'); // Adjust the path as needed
+include('../../../my_custom_dashboard/student_dashboard.php'); // Adjust the path as needed
 
 // Render the footer
 echo $OUTPUT->footer();

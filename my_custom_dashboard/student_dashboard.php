@@ -1,4 +1,4 @@
 <?php 
 
 
-echo "<h1>Ali</h1>";
+echo "<h1>Student Dashboard</h1>";
