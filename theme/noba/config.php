@@ -69,12 +69,12 @@ $THEME->layouts = [
  //       'defaultregion' => 'side-pre',
  //   ),
     // My dashboard page.
-    // 'mydashboard' => array(
-    //     'file' => 'custompage.php',
-    //     'regions' => array('side-pre'),
-    //     'defaultregion' => 'side-pre',
-    //     'options' => array('nonavbar' => true, 'langmenu' => true),
-    // ),
+    'mydashboard' => array(
+        'file' => 'custompage.php',
+        'regions' => array('side-pre'),
+        'defaultregion' => 'side-pre',
+        'options' => array('nonavbar' => true, 'langmenu' => true),
+    ),
     // 'login' => array(
 	//     'file' => 'login.php',
 	//     'regions' => array(),
