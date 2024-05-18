@@ -9,6 +9,8 @@ require_login();
 // Set up the page context
 $PAGE->set_context(context_system::instance());
 $PAGE->set_pagelayout('noba'); // Use the studentdashboard layout
+$PAGE->set_title(get_string('pluginname', 'local_greetings'));
+$PAGE->set_heading(get_string('pluginname', 'local_greetings'));
 
 // Render the header
 echo $OUTPUT->header();
