@@ -8,7 +8,7 @@ require_login();
 
 // Set up the page context
 $PAGE->set_context(context_system::instance());
-$PAGE->set_pagelayout('studentdashboard'); // Use the studentdashboard layout
+$PAGE->set_pagelayout('noba'); // Use the studentdashboard layout
 
 // Render the header
 echo $OUTPUT->header();
