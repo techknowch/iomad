@@ -71,8 +71,8 @@ $THEME->layouts = [
     // My dashboard page.
     'mydashboard' => array(
         'file' => 'custompage.php',
-        'regions' => array('side-pre'),
-        'defaultregion' => 'side-pre',
+        'regions' => array(),
+        'defaultregion' => '',
         'options' => array('nonavbar' => true, 'langmenu' => true),
     ),
     // 'login' => array(
