@@ -11,15 +11,12 @@ $PAGE->set_pagelayout('standard');
 $output = $PAGE->get_renderer('local_greetings');
 
 
-echo $OUTPUT->header();
-// Your content goes here. We will just echo some HTML for simplicity.
-// echo '<div class="box border p-3">Here is some content but it can be anything else, too.</div>';
+$output = $PAGE->get_renderer('local_greetings');
 
-$data = [
-    'name' => 'Lorem ipsum',
-    'description' => format_text($description, FORMAT_HTML),
-];
+echo $output->header();
 
-echo $OUTPUT->render_from_template('local_greetings/layout-test', $data);
+$sometext = 'Here is some content but it can be anything else, too.';
+$renderable = new \local_greetings\output\layout_test_page($sometext);
+echo $output->render($renderable);
 
-echo $OUTPUT->footer();
+echo $output->footer();
