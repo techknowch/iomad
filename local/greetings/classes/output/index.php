@@ -1,24 +1,23 @@
 <?php
 
-// local/greetings/classes/output/index_page.php
+// local/greetings/index.php
 
-namespace local_greetings\output;
+require_once(__DIR__ . '/../../config.php');
+require_login();
 
-use renderable;
-use templatable;
-use renderer_base;
-use stdClass;
+$PAGE->set_url(new moodle_url('/local/greetings/index.php'));
+$PAGE->set_context(context_system::instance());
+$PAGE->set_title(get_string('greetingstitle', 'local_greetings'));
+$PAGE->set_heading(get_string('greetingstitle', 'local_greetings'));
 
-class index_page implements renderable, templatable {
-    private $messages;
+// Example messages array (replace with actual data retrieval logic)
+$messages = [
+    ['id' => 1, 'content' => 'Hello, World!', 'author' => 'User1'],
+    ['id' => 2, 'content' => 'Greetings!', 'author' => 'User2']
+];
 
-    public function __construct($messages) {
-        $this->messages = $messages;
-    }
+$output = $PAGE->get_renderer('local_greetings');
+echo $output->header();
+echo $output->render_index_page($messages);
+echo $output->footer();
 
-    public function export_for_template(renderer_base $output): stdClass {
-        $data = new stdClass();
-        $data->messages = $this->messages;
-        return $data;
-    }
-}
