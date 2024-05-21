@@ -8,7 +8,8 @@ $PAGE->set_url(new moodle_url('/local/greetings/layout-test.php'));
 
 $PAGE->set_title(get_string('pluginname', 'local_greetings'));
 $PAGE->set_heading(get_string('pluginname', 'local_greetings'));
-$PAGE->set_page_layout('standard');
+$PAGE->set_pagelayout('standard');
+
 
 echo $OUTPUT->header();
 // Your content goes here. We will just echo some HTML for simplicity.
