@@ -1,11 +1,29 @@
 <?php
 
-$output = $PAGE->get_renderer('local_greetings');
+namespace local_greetings\output;
 
-echo $output->header();
+use renderable;
+use renderer_base;
+use templatable;
+use stdClass;
 
-$sometext = 'Here is some content but it can be anything else, too.';
-$renderable = new \local_greetings\output\layout_test_page($sometext);
-echo $output->render($renderable);
+class layout_test_page implements renderable, templatable {
+    /** @var string $sometext Some text to pass data to a template. */
+    private $sometext = null;
 
-echo $output->footer();
+    public function __construct($sometext): void {
+        $this->sometext = $sometext;
+    }
+
+    /**
+     * Export data to be used as the context for a mustache template.
+     *
+     * @return stdClass
+     */
+    public function export_for_template(renderer_base $output): stdClass {
+        $data = new stdClass();
+        $data->sometext = $this->sometext;
+
+        return $data;
+    }
+}
