@@ -16,7 +16,7 @@ $messages = [
     ['id' => 2, 'content' => 'Greetings!', 'author' => 'User2']
 ];
 
-$renderable = new \local_greetings\output\index_page($messages);
+$renderable = new \local\greetings\output\index_page($messages);
 $output = $PAGE->get_renderer('local_greetings');
 echo $output->header();
 echo $output->render($renderable);
