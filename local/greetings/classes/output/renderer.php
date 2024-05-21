@@ -1,29 +1,24 @@
 <?php
 
+// local/greetings/classes/output/index_page.php
+
 namespace local_greetings\output;
 
 use renderable;
-use renderer_base;
 use templatable;
+use renderer_base;
 use stdClass;
 
-class layout_test_page implements renderable, templatable {
-    /** @var string $sometext Some text to pass data to a template. */
-    private $sometext = null;
+class index_page implements renderable, templatable {
+    private $messages;
 
-    public function __construct($sometext): void {
-        $this->sometext = $sometext;
+    public function __construct($messages) {
+        $this->messages = $messages;
     }
 
-    /**
-     * Export data to be used as the context for a mustache template.
-     *
-     * @return stdClass
-     */
     public function export_for_template(renderer_base $output): stdClass {
         $data = new stdClass();
-        $data->sometext = $this->sometext;
-
+        $data->messages = $this->messages;
         return $data;
     }
 }
